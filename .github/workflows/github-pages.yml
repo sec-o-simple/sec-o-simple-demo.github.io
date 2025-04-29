@@ -37,8 +37,8 @@ jobs:
       - name: Remove .git directory to allow further process
         run: |
              rm -rf ./config/.git    
-             cd -r ./config/.well-known ./sec-o-simple/.well-known
-             cd -r _config.yaml ./sec-o-simple/_config.yaml
+             cp -r ./config/.well-known ./sec-o-simple/.well-known
+             cp _config.yaml ./sec-o-simple/_config.yaml
              cd sec-o-simple
       - name: Deploy to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v4
