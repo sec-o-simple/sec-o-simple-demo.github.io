@@ -19,16 +19,27 @@ jobs:
     steps:
       - name: Checkout current repo
         uses: actions/checkout@v4
-      - name: Checkout built GitHub Pages
+      - name: Checkout built GitHub Pages from sec-o-simple
         uses: actions/checkout@v4
         with:
            repository: sec-o-simple/sec-o-simple
            ref: gh-pages
-           path: build
+           path: sec-o-simple
       - name: Remove .git directory to allow further process
         run: |
-             cd build
-             rm -rf .git
+             rm -rf ./sec-o-simple/.git
+             cd ..
+      - name: Checkout config
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: config
+      - name: Remove .git directory to allow further process
+        run: |
+             rm -rf ./config/.git    
+             cd -r ./config/.well-known ./sec-o-simple/.well-known
+             cd -r _config.yaml ./sec-o-simple/_config.yaml
+             cd sec-o-simple
       - name: Deploy to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v4
         with:
