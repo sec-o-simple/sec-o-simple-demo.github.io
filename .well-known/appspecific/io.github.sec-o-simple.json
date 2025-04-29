@@ -5,20 +5,20 @@
         "id": "summary",
         "category": "summary",
         "title": "Demo summary",
-        "description": "This is a demo summary"
+        "content": "This is a demo summary"
       },
       {
         "id": "legaldisclaimer",
         "category": "legal_disclaimer",
         "title": "Legal Disclaimer",
-        "description": "This a demo legal disclaimer, that can't be removed",
+        "content": "This a demo legal disclaimer, that can't be removed",
         "readonly": true
       },
       {
         "id": "legaldisclaimer",
         "category": "legal_disclaimer",
         "title": "Legal Disclaimer",
-        "description": "This a demo legal disclaimer, that can be removed",
+        "content": "This a demo legal disclaimer, that can be removed",
         "readonly": false
       }
     ],
