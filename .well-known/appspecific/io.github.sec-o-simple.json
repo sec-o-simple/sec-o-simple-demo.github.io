@@ -4,20 +4,87 @@
       {
         "id": "summary",
         "category": "summary",
-        "title": "Summary"
+        "title": "Demo summary",
+        "description": "This is a demo summary"
       },
       {
         "id": "legaldisclaimer",
         "category": "legal_disclaimer",
-        "title": "Legal Disclaimer"
+        "title": "Legal Disclaimer",
+        "description": "This a demo legal disclaimer, that can't be removed",
+        "readonly": true
       },
       {
-        "id": "product",
-        "category": "description",
-        "title": "Product Description"
+        "id": "legaldisclaimer",
+        "category": "legal_disclaimer",
+        "title": "Legal Disclaimer",
+        "description": "This a demo legal disclaimer, that can be removed",
+        "readonly": false
+      }
+    ],
+    
+    "document-information.publisher.name": "Demo publisher",
+    "document-information.publisher.category": "discoverer",
+    "document-information.publisher.namespace": "https://publisher.example.org/",
+    "document-information.publisher.contactDetails": "Some contact details",
+    "document-information.publisher.issuingAuthority": "Example authority",
+
+    "document-information.references": [
+      {
+        "id": "examplereference",
+        "summary": "Example Reference",
+        "url": "https://example.com"
+      }
+    ],
+    
+    "products": [
+      {
+        "readonly": false,
+        "id": "vendor1",
+        "category": "vendor",
+        "name": "Example vendor",
+        "description": "",
+        "subBranches": [
+          {
+            "id": "product1",
+            "readonly": false,
+            "category": "product_name",
+            "name": "Product A",
+            "description": "",
+            "subBranches": [
+              {
+                "id": "version1",
+                "readonly": false,
+                "category": "product_version",
+                "name": "1.0.0",
+                "description": "Initial product version",
+                "subBranches": []
+              }
+            ]
+          }
+        ]
+      }
+    ],
+
+    "vulnerabilities": [
+      {
+        "id": "v1",
+        "readonly": false,
+        "cve": "CVE-9999-11111",
+        "cwe": "CWE1",
+        "title": "Vulnerability 1",
+        "notes": [
+          {
+            "readonly": false,
+            "id": "description",
+            "category": "description",
+            "title": "Vulnerability Description",
+            "content": "An issue was discovered in Tool. The reference assigned to transactions can be reused. When completing a payment, the first or all transactions with the same reference are completed, depending on timing. This can be used to transfer more money onto employee cards than is paid."
+          }
+        ],
+        "products": []
       }
     ]
-
   }
 }
 
