@@ -1,5 +1,7 @@
 {
   "template": {
+    "document-information.language": "en",
+    "document-information.id": "demo-id-2025-",
     "document-information.notes": [
       {
         "id": "summary",
@@ -57,6 +59,14 @@
                 "readonly": false,
                 "category": "product_version",
                 "name": "1.0.0",
+                "description": "Initial product version",
+                "subBranches": []
+              },
+              {
+                "id": "version1",
+                "readonly": false,
+                "category": "product_version",
+                "name": "1.1.0",
                 "description": "Initial product version",
                 "subBranches": []
               }
